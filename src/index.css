@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LexionTech Design System */
+@layer base {
+  /* Apply global border color from CSS variable */
+  * {
+    border-color: hsl(var(--border) / 1);
+  }
+
+  /* Body background and text color from design tokens */
+  body {
+    background-color: hsl(var(--background) / 1);
+    color: hsl(var(--foreground) / 1);
+    font-family: system-ui, sans-serif;
+  }
+
+  /* Optional: default anchor color */
+  a {
+    color: hsl(var(--primary) / 1);
+    text-decoration: none;
+  }
+
+  /* Dark mode support */
+  .dark body {
+    background-color: hsl(var(--background) / 1);
+    color: hsl(var(--foreground) / 1);
+  }
+}
