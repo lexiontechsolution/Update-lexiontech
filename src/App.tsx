@@ -10,10 +10,10 @@ import Pricing from "./pages/Pricing";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+// 1. Import the new component
+import ScrollToTop from "./components/ScrollToTop"; // Adjust path as needed
 
-// Remove TooltipProvider import if the file "@/components/ui/tooltip" doesn’t exist
-// Otherwise, keep it only if you're using a tooltip system like shadcn-ui
-// import { TooltipProvider } from "@/components/ui/tooltip";
+// ... (other imports)
 
 const queryClient = new QueryClient();
 
@@ -22,6 +22,8 @@ const App = () => (
     {/* Optional: Uncomment this only if TooltipProvider exists */}
     {/* <TooltipProvider> */}
       <BrowserRouter>
+        {/* 2. Place ScrollToTop directly inside BrowserRouter */}
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
